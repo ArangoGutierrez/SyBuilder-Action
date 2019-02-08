@@ -1,4 +1,5 @@
 #!/bin/sh
+# Copyright (c) 2019, Sylabs Inc. All rights reserved.
 
 # SyBuilder Action allow users to leverage  https://cloud.sylabs.io builder and library to
 # Build images on a merge event, with a commit tag
