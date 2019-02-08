@@ -1,4 +1,4 @@
-FROM ashael/dockerfile:singularity_3.0.3
+FROM ashael/dockerfiles:singularity_3.0.3
 MAINTAINER Eduardo Arango <eduardo@sylabs.io>
 
 LABEL version="1.0.0"
