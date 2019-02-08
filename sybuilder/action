@@ -50,7 +50,7 @@ main(){
 if [[ "$action" == "closed" ]] && [[ "$merged" == "true" ]]; then
 	build_output=$(singularity build --remote --detached library://${SYLABS_USER}/${SYLABS_PROJECT}/${LIBRARY_IMAGE}:${TAG} ${DEF_FILE})
 	success=$?
-	if [ "$success" -eq 1 ]; then
+	if [ "$success" -eq 0 ]; then
 		echo -e "$build_output"
 		exit 0
 	else
