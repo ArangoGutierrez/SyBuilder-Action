@@ -46,7 +46,10 @@ main(){
 	REPO_OWNER=$(jq --raw-output .pull_request.head.repo.owner.login "$GITHUB_EVENT_PATH")
 	REPO_NAME=$(jq --raw-output .pull_request.head.repo.name "$GITHUB_EVENT_PATH")
 
+cat "$GITHUB_EVENT_PATH"
+echo ""
 echo -e "Merge commit sha: $TAG\n"
+echo ""
 
 ## Build via Sylabs Cloud builder , and store on a defined library path
 if [[ "$action" == "closed" ]] && [[ "$merged" == "true" ]]; then
