@@ -47,6 +47,8 @@ main(){
 	REPO_NAME=$(jq --raw-output .pull_request.head.repo.name "$GITHUB_EVENT_PATH")
 
 LIBRARY_URI=$(printf "library://%s/%s/%s:%s" ${SYLABS_USER} ${SYLABS_PROJECT} ${LIBRARY_IMAGE} ${TAG})
+echo ${LIBRARY_URI}
+echo ${TAG}
 ## Build via Sylabs Cloud builder , and store on a defined library path
 if [[ "$action" == "closed" ]] && [[ "$merged" == "true" ]]; then
 	build_output=$(singularity build --remote --detached ${LIBRARY_URI} ${DEF_FILE})
