@@ -42,7 +42,7 @@ main(){
 	action=$(jq --raw-output .action "$GITHUB_EVENT_PATH")
 	merged=$(jq --raw-output .pull_request.merged "$GITHUB_EVENT_PATH")
 	ref=$(jq --raw-output .pull_request.head.ref "$GITHUB_EVENT_PATH")
-	TAG=$(jq --raw-output .merge_commit_sha "$GITHUB_EVENT_PATH")
+	TAG=$(jq --raw-output .after "$GITHUB_EVENT_PATH")
 	REPO_OWNER=$(jq --raw-output .pull_request.head.repo.owner.login "$GITHUB_EVENT_PATH")
 	REPO_NAME=$(jq --raw-output .pull_request.head.repo.name "$GITHUB_EVENT_PATH")
 
