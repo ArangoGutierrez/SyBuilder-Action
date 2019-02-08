@@ -6,7 +6,6 @@
 #
 # Reproducible science!!
 set -e
-set -o pipefail
 
 if [[ -z "$SYLABS_TOKEN" ]]; then
 	echo "Set the SYLABS_TOKEN env variable."
